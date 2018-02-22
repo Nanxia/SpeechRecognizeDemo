@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-dw-WXO">
+                                <rect key="frame" x="156" y="238" width="62" height="30"/>
+                                <state key="normal" title="语音拍照"/>
+                                <connections>
+                                    <segue destination="RMh-LF-iiA" kind="show" id="o2T-ws-VbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69a-MH-OJ7">
+                                <rect key="frame" x="156" y="361" width="62" height="30"/>
+                                <state key="normal" title="语音识别"/>
+                                <connections>
+                                    <segue destination="9gu-CG-Vq9" kind="show" id="48T-dx-6Ya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="69a-MH-OJ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fE-bd-Nif"/>
+                            <constraint firstItem="1dD-dw-WXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ab6-dO-eBI"/>
+                            <constraint firstItem="69a-MH-OJ7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="42.5" id="qxv-lE-OpL"/>
+                            <constraint firstItem="1dD-dw-WXO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80.5" id="s88-12-osP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="44"/>
+        </scene>
+        <!--Camera Speech Reconize Controller View Controller-->
+        <scene sceneID="076-Lx-Dll">
+            <objects>
+                <viewController id="RMh-LF-iiA" customClass="CameraSpeechReconizeControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZCl-ls-pBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Cl-4d-fFX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVA-Mi-Oe7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP9-SU-4CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="36"/>
+        </scene>
+        <!--Recognize View Controller-->
+        <scene sceneID="ten-pf-Ehe">
+            <objects>
+                <viewController id="9gu-CG-Vq9" customClass="recognizeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eo9-gH-zV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="D0e-iF-9yR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xhe-Pn-6CK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rz8-zN-M4Y">
+                                <rect key="frame" x="16" y="174" width="343" height="325"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-H4-bns">
+                                <rect key="frame" x="22" y="579" width="50" height="30"/>
+                                <state key="normal" title="Canton"/>
+                                <connections>
+                                    <action selector="CantonClick:" destination="9gu-CG-Vq9" eventType="touchUpInside" id="DGn-To-Kc1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WU-oi-Dmb">
+                                <rect key="frame" x="115" y="579" width="62" height="30"/>
+                                <state key="normal" title="Mainland"/>
+                                <connections>
+                                    <action selector="MainLandClick:" destination="9gu-CG-Vq9" eventType="touchUpInside" id="loN-yl-RHG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRG-9R-uK2">
+                                <rect key="frame" x="133" y="617" width="108" height="30"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="recButtonClick:" destination="9gu-CG-Vq9" eventType="touchUpInside" id="IOh-47-6fx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYY-iH-aQN">
+                                <rect key="frame" x="22" y="617" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="9gu-CG-Vq9" eventType="touchUpInside" id="g9e-qH-6ZF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-cA-0Su">
+                                <rect key="frame" x="226" y="579" width="44" height="30"/>
+                                <state key="normal" title="en-US"/>
+                                <connections>
+                                    <action selector="enUSClick:" destination="9gu-CG-Vq9" eventType="touchUpInside" id="WPV-wI-V8P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7WU-oi-Dmb" firstAttribute="centerX" secondItem="Xhe-Pn-6CK" secondAttribute="centerX" id="1bK-3M-noC"/>
+                            <constraint firstItem="D0e-iF-9yR" firstAttribute="top" secondItem="rRG-9R-uK2" secondAttribute="bottom" constant="20" id="4v2-Pf-KTk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rz8-zN-M4Y" secondAttribute="leading" id="Ijr-9u-H5M"/>
+                            <constraint firstItem="IIA-cA-0Su" firstAttribute="centerX" secondItem="Xhe-Pn-6CK" secondAttribute="centerX" constant="88.5" id="MJm-y0-zds"/>
+                            <constraint firstItem="IIA-cA-0Su" firstAttribute="centerY" secondItem="Xhe-Pn-6CK" secondAttribute="centerY" constant="-290.5" id="O09-NP-2V6"/>
+                            <constraint firstItem="Nxn-H4-bns" firstAttribute="centerX" secondItem="Xhe-Pn-6CK" secondAttribute="centerX" constant="-92.5" id="OAa-CL-gi4"/>
+                            <constraint firstItem="rz8-zN-M4Y" firstAttribute="top" secondItem="7WU-oi-Dmb" secondAttribute="bottom" constant="16" id="hHg-tC-tEp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rz8-zN-M4Y" secondAttribute="trailing" id="iVQ-D9-U7Z"/>
+                            <constraint firstItem="Nxn-H4-bns" firstAttribute="centerY" secondItem="Xhe-Pn-6CK" secondAttribute="centerY" constant="-290.5" id="jSJ-PJ-Jjb"/>
+                            <constraint firstItem="rRG-9R-uK2" firstAttribute="centerX" secondItem="Xhe-Pn-6CK" secondAttribute="centerX" id="mAW-zW-MBG"/>
+                            <constraint firstItem="cYY-iH-aQN" firstAttribute="leading" secondItem="Xhe-Pn-6CK" secondAttribute="leadingMargin" constant="6" id="sjV-NE-tHk"/>
+                            <constraint firstItem="D0e-iF-9yR" firstAttribute="top" secondItem="cYY-iH-aQN" secondAttribute="bottom" constant="20" id="xBa-M6-QtO"/>
+                            <constraint firstItem="7WU-oi-Dmb" firstAttribute="centerY" secondItem="Xhe-Pn-6CK" secondAttribute="centerY" constant="-290.5" id="zOK-QB-34w"/>
+                            <constraint firstItem="D0e-iF-9yR" firstAttribute="top" secondItem="rz8-zN-M4Y" secondAttribute="bottom" constant="73" id="zap-gT-sLs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CantonButton" destination="Nxn-H4-bns" id="V37-ga-Z32"/>
+                        <outlet property="MainLandButton" destination="7WU-oi-Dmb" id="yey-7z-pbX"/>
+                        <outlet property="USButton" destination="IIA-cA-0Su" id="C4B-06-7Dy"/>
+                        <outlet property="recButton" destination="rRG-9R-uK2" id="0H7-hu-Djn"/>
+                        <outlet property="textView" destination="rz8-zN-M4Y" id="1Ug-u7-wzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vh2-Fv-lYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141.5999999999999" y="719.19040479760122"/>
+        </scene>
+    </scenes>
+</document>
